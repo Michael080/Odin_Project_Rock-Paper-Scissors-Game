@@ -10,7 +10,12 @@
 <body>
 <h1>Rock, Paper, Scissors!</h1>
 <script>
+    weapon = ['Rock', 'Paper', 'Scissors']
 
+    function computerPlay() {
+        random_weapon = Math.floor(Math.random() * 3);
+        return weapon[random_weapon];
+    }
 </script>
 </body>
 </html>
