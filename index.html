@@ -10,11 +10,37 @@
 <body>
 <h1>Rock, Paper, Scissors!</h1>
 <script>
-    weapon = ['Rock', 'Paper', 'Scissors']
+    weapon = ['Rock', 'Paper', 'Scissors'];
 
     function computerPlay() {
         random_weapon = Math.floor(Math.random() * 3);
         return weapon[random_weapon];
+    }
+
+    // Function that takes to params playerSelection & computerSelection
+    function play(playerSelection, computerSelection) {
+        //If statements for all 3 possible playerSelections:
+       // Rock
+        if (playerSelection == computerSelection) {
+            console.log('Draw...');
+
+        } else {
+        //  !!!!!!   BELOW IF's WITH SWITCH STATEMENT TO TEST FOR
+            // WIN SCENARIOS AND USE FINAL ELSE TO CONCLUDE LOSS
+            switch (true) {
+                case (playerSelection === 'rock' && computerSelection === 'scissors'):
+                    console.log('You win!');
+                    break;
+                case (playerSelection === 'paper' && computerSelection === 'rock'):
+                    console.log('You win!');
+                    break;
+                case (playerSelection === 'scissors' && computerSelection === 'paper'):
+                    console.log('You win!');
+                    break;
+                    default:
+                        console.log('You lose :(');
+            }
+        }
     }
 </script>
 </body>
