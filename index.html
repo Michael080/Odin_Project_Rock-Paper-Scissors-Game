@@ -43,29 +43,38 @@
         }
     }
 
-//    Test computerPlay() & play()
-//                      ROCK
-//    playerSelection = 'rock' & computerPlay()
-    var playerSelection = 'rock';
-    var computerSelection = computerPlay().toLowerCase();
-    console.log(`playerSelection: ${playerSelection}    computerSelection: ${computerSelection}`);
-    play(playerSelection, computerSelection);
-//    ------------------------------------------
-    //                      PAPER
-    //    playerSelection = 'paper' & computerPlay()
-    var playerSelection = 'paper';
-    var computerSelection = computerPlay().toLowerCase();
-    console.log('------------------------');
-    console.log(`playerSelection: ${playerSelection}    computerSelection: ${computerSelection}`);
-    play(playerSelection, computerSelection);
-    //    ------------------------------------------
-    //                      SCISSORS
-    //    playerSelection = 'scissors' & computerPlay()
-    var playerSelection = 'scissors';
-    var computerSelection = computerPlay().toLowerCase();
-    console.log('------------------------');
-    console.log(`playerSelection: ${playerSelection}    computerSelection: ${computerSelection}`);
-    play(playerSelection, computerSelection);
+
+    function game(rounds) {
+        for (i = 0; i < rounds; i++) {
+            var playerSelection = prompt('Choose your weapon:').toLowerCase();
+            var computerSelection = computerPlay();
+        }
+    }
+
+    game(5);
+// //    Test computerPlay() & play()
+// //                      ROCK
+// //    playerSelection = 'rock' & computerPlay()
+//     var playerSelection = 'rock';
+//     var computerSelection = computerPlay().toLowerCase();
+//     console.log(`playerSelection: ${playerSelection}    computerSelection: ${computerSelection}`);
+//     play(playerSelection, computerSelection);
+// //    ------------------------------------------
+//     //                      PAPER
+//     //    playerSelection = 'paper' & computerPlay()
+//     var playerSelection = 'paper';
+//     var computerSelection = computerPlay().toLowerCase();
+//     console.log('------------------------');
+//     console.log(`playerSelection: ${playerSelection}    computerSelection: ${computerSelection}`);
+//     play(playerSelection, computerSelection);
+//     //    ------------------------------------------
+//     //                      SCISSORS
+//     //    playerSelection = 'scissors' & computerPlay()
+//     var playerSelection = 'scissors';
+//     var computerSelection = computerPlay().toLowerCase();
+//     console.log('------------------------');
+//     console.log(`playerSelection: ${playerSelection}    computerSelection: ${computerSelection}`);
+//     play(playerSelection, computerSelection);
 </script>
 </body>
 </html>
