@@ -14,7 +14,7 @@
 
     function computerPlay() {
         random_weapon = Math.floor(Math.random() * 3);
-        return weapon[random_weapon];
+        return weapon[random_weapon].toLowerCase();
     }
 
     // Function that takes to params playerSelection & computerSelection
@@ -29,13 +29,7 @@
             // WIN SCENARIOS AND USE FINAL ELSE TO CONCLUDE LOSS
             switch (true) {
                 case (playerSelection === 'rock' && computerSelection === 'scissors'):
-                    console.log(`>> ${playerSelection} beats ${computerSelection}`)
-                    console.log('You win!');
-                    break;
                 case (playerSelection === 'paper' && computerSelection === 'rock'):
-                    console.log(`>> ${playerSelection} beats ${computerSelection}`)
-                    console.log('You win!');
-                    break;
                 case (playerSelection === 'scissors' && computerSelection === 'paper'):
                     console.log(`>> ${playerSelection} beats ${computerSelection}`)
                     console.log('You win!');
