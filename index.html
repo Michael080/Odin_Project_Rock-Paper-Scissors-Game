@@ -12,6 +12,9 @@
 <script>
     let weapon = ['Rock', 'Paper', 'Scissors'];
 
+    let playerScore = 0;
+    let computerScore = 0;
+
     function computerPlay() {
         random_weapon = Math.floor(Math.random() * 3);
         return weapon[random_weapon].toLowerCase();
@@ -21,18 +24,22 @@
 
         if (playerSelection == computerSelection) {
             console.log('Draw...');
-
+            console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
         } else {
             switch (true) {
                 case (playerSelection === 'rock' && computerSelection === 'scissors'):
                 case (playerSelection === 'paper' && computerSelection === 'rock'):
                 case (playerSelection === 'scissors' && computerSelection === 'paper'):
+                    playerScore++;
                     console.log(`>> ${playerSelection} beats ${computerSelection}`)
                     console.log('You win!');
+                    console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
                     break;
                     default:
+                        computerScore++;
                         console.log(`>> ${computerSelection} beats ${playerSelection}`)
                         console.log('You lose :(');
+                        console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
             }
         }
     }
