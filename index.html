@@ -20,8 +20,13 @@
         return weapon[random_weapon].toLowerCase();
     }
 
-    function play(playerSelection, computerSelection) {
+    function scoreBoard(winWeapon, loseWeapon, point, win = false){
+        point++;
+        console.log(`>> ${winWeapon} beats ${loseWeapon}`);
+        console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
+    }
 
+    function play(playerSelection, computerSelection) {
         if (playerSelection == computerSelection) {
             console.log('Draw...');
             console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
@@ -30,16 +35,16 @@
                 case (playerSelection === 'rock' && computerSelection === 'scissors'):
                 case (playerSelection === 'paper' && computerSelection === 'rock'):
                 case (playerSelection === 'scissors' && computerSelection === 'paper'):
-                    playerScore++;
-                    console.log(`>> ${playerSelection} beats ${computerSelection}`)
+                    scoreBoard(playerSelection, computerSelection, playerScore);
                     console.log('You win!');
-                    console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
+
+
                     break;
                     default:
-                        computerScore++;
-                        console.log(`>> ${computerSelection} beats ${playerSelection}`)
+                        scoreBoard(computerSelection, playerSelection, computerScore);
                         console.log('You lose :(');
-                        console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
+
+
             }
         }
     }
