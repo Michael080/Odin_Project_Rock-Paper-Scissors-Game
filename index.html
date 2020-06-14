@@ -24,6 +24,8 @@
         point++;
         console.log(`>> ${winWeapon} beats ${loseWeapon}`);
         console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
+        win ? console.log('You win!'):
+            console.log('You lose :(');
     }
 
     function play(playerSelection, computerSelection) {
@@ -35,16 +37,10 @@
                 case (playerSelection === 'rock' && computerSelection === 'scissors'):
                 case (playerSelection === 'paper' && computerSelection === 'rock'):
                 case (playerSelection === 'scissors' && computerSelection === 'paper'):
-                    scoreBoard(playerSelection, computerSelection, playerScore);
-                    console.log('You win!');
-
-
+                    scoreBoard(playerSelection, computerSelection, playerScore, true);
                     break;
                     default:
                         scoreBoard(computerSelection, playerSelection, computerScore);
-                        console.log('You lose :(');
-
-
             }
         }
     }
