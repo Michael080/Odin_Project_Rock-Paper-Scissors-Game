@@ -15,7 +15,7 @@
     let playerScore = 0;
     let computerScore = 0;
 
-    function computerPlay() {
+    function cpuWeaponSelect() {
         random_weapon = Math.floor(Math.random() * 3);
         return weapon[random_weapon].toLowerCase();
     }
@@ -30,7 +30,7 @@
                 console.log('You lose :(');
     }
 
-    function play(playerSelection, computerSelection) {
+    function matchUp(playerSelection, computerSelection) {
         if (playerSelection == computerSelection) {
             console.log('');
             console.log('----------------------------')
@@ -49,15 +49,15 @@
         }
     }
 
-    function game(rounds) {
+    function playRounds(rounds) {
         for (i = 0; i < rounds; i++) {
             var playerSelection = prompt('Choose your weapon:').toLowerCase();
-            var computerSelection = computerPlay();
-            play(playerSelection, computerSelection);
+            var computerSelection = cpuWeaponSelect();
+            matchUp(playerSelection, computerSelection);
         }
     }
 
-    game(5);
+    playRounds(5);
 
 </script>
 </body>
