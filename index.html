@@ -22,6 +22,8 @@
 
     function scoreBoard(winWeapon, loseWeapon, point, win = false){
         point++;
+        console.log('');
+        console.log('----------------------------')
         console.log(`>> ${winWeapon} beats ${loseWeapon}`);
         console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
         win ? console.log('You win!'):
@@ -30,6 +32,8 @@
 
     function play(playerSelection, computerSelection) {
         if (playerSelection == computerSelection) {
+            console.log('');
+            console.log('----------------------------')
             console.log('Draw...');
             console.log(`You: ${playerScore} vs. CPU: ${computerScore}`);
         } else {
