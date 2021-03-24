@@ -81,7 +81,7 @@ function cpuWeaponSelect() {
 
 // let firstRound = false;
 function scoreBoard(winWeapon, loseWeapon, draw = false){
-  const winLoseMatch = `>> ${winWeapon.toUpperCase()} beats ${loseWeapon.toUpperCase()}`;
+  const winLoseMatch = `${winWeapon.toUpperCase()} beats ${loseWeapon.toUpperCase()}`;
 
   playerObj.weapon === computerObj.weapon ?
     draw = true : draw = false;
@@ -168,6 +168,7 @@ function selectWeapons(event) {
   playerObj.weapon = event.target.id;
   playerObj.setWeaponDOM(playerObj.weapon);
   event.currentTarget.classList.add('revert-select');
+
   // CPU:
   computerObj.weapon = cpuWeaponSelect();
   cpuWeaponDisplay.textContent = computerObj.weapon; // display cpu selection
