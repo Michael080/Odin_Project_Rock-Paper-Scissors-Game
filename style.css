@@ -1,0 +1,84 @@
+h1 {
+  margin-bottom: 1em;
+}
+
+.flash-text {
+  color: white;
+}
+
+p {
+  display: inline;
+  
+}
+
+.container-scoreboard {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1em;
+}
+
+.scoreboard {
+  font-size: 2rem;
+  width: 25%;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  height: 400px;
+  width: 550px;
+  justify-content: space-between;
+}
+
+.weapons-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.weapons-cpu-selection {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 232px;
+}
+
+.weapon {
+  font-size: 3rem;
+  color: green;
+  display: grid;
+  place-items: center;
+  background-color:aqua;
+  width: 13rem;
+  height: 4rem;
+  border-radius: .25rem;
+  padding: .25em;
+}
+
+.revert-select {
+  background-color:green;
+  color: aqua;
+}
+
+.weapon-cpu {
+  cursor: default;
+  background-color: green;
+  color: aqua;
+}
+
+.weapon-hover:hover {
+  cursor: pointer;
+  background-color:green;
+  color: aqua;
+}
+
+.weapon-cpu:hover {
+  cursor: default;
+}
+
+.hidden {
+  display: none;
+}

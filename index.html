@@ -5,10 +5,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-<h1>Rock, Paper, Scissors!</h1>
+
+<h1 class="prompt">Rock, Paper, Scissors!</h1>
+
+<div class="container-scoreboard">
+    <div class="scoreboard">
+        <div class="score-player">Player: <p class="player-score">0</p></div>
+        <div class="score-cpu">CPU: <p class="cpu-score">0</p></div>
+    </div>
+</div><!-- ./container-scoreboard -->
+<div class="container">
+    <div class="weapons-select">
+        <div class="weapon" id="rock">Rock</div>
+        <div class="weapon" id="paper">Paper</div>
+        <div class="weapon" id="scissors">Scissors</div>
+    </div><!-- ./container -->
+
+    <div class="weapons-cpu-selection">
+        <div class="weapon weapon-cpu">cpu</div>
+    </div>
+</div>
+
+<!-- <p class="prompt hidden">Select your weapon!</p> -->
+
 <script src="script.js"></script>
 </body>
 </html>
